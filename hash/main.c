@@ -13,7 +13,7 @@
 #define HASH_NTCREATEFILEMAPPING  0x54b0c15c9e9ac4c2
 #define HASH_LDRLOADDLL  0x45cce9a819afbfd5
 
-#define TRIAL_COUNT 30
+#define TRIAL_COUNT 100
 
 double get_time()
 {
@@ -31,11 +31,12 @@ int main(void)
 
 	for (int i = 0; i < TRIAL_COUNT; i++)
 	{
-		double start_time = get_time();
 
 		struct hash_table* table = LoadExportsIntoTable(hNtdll);
 		if (table == NULL)
 			return -1;
+
+		double start_time = get_time();
 
 		void* NTOPENPROCESS = hash_table_search(table, HASH_NTOPENPROCESS);
 		void* NTMAPVIEWOFFILE = hash_table_search(table, HASH_NTMAPVIEWOFFILE);

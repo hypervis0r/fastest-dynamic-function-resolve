@@ -12,7 +12,7 @@
 #define HASH_NTCREATEFILEMAPPING  0x54b0c15c9e9ac4c2
 #define HASH_LDRLOADDLL  0x45cce9a819afbfd5
 
-#define TRIAL_COUNT 30
+#define TRIAL_COUNT 100
 
 double get_time()
 {

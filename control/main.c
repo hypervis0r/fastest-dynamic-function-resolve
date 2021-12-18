@@ -1,7 +1,7 @@
 #include <Windows.h>
 #include <stdio.h>
 
-#define TRIAL_COUNT 30
+#define TRIAL_COUNT 100
 
 double get_time()
 {
